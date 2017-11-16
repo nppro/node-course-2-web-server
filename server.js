@@ -3,6 +3,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+// khai báo biến port lấy port từ hệ thống hoặc là 4800
+const port = process.env.PORT || 4800;
 // khai báo biến app
 var app = express();
 
@@ -72,6 +74,6 @@ app.get('/bad', (req, res)=>{
     });
 });
 
-app.listen(4800, () => {
+app.listen(port, () => {
     console.log('Server is up on port 4800');
 });
